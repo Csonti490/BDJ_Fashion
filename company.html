@@ -63,15 +63,32 @@
                 </div>
             </div>
 
-            <div class="container m-0 p-0 mx-auto d-block">
+            
+<div id="loading" class="text-center">
+    Az oldal betöltése folyamatban...
+    <br>
+    <i class="fa-solid fa-cog fa-spin" id="iii"></i>
+</div>
+<div id="content" class="d-none">
+    <div class="container m-0 p-0 mx-auto d-block">
+        <div class="row m-0 p-0">
+            <div class="col-12 m-0 p-0">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTnD8Yq8QdAP9E4MfuwLgoyglx9BXHGhpndU5WeuRD_94KFw81gH8ZllqZjdgLnTFfwTleEluNdRJQH/embed?start=false&loop=true&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" id="urlap" class="mx-auto d-block"></iframe>
+            </div>
+        </div>
+    </div>
+    <p class="text-center">Tejles mérethez: <a href="https://docs.google.com/forms/d/e/1FAIpQLScMG2jVmJmw7XBTA69A41VdmqwZzI3lkil3pOk6pE2sqzJxIQ/viewform?usp=sf_link" target="_blank">KATT IDE</a></p>
+</div>
+
+            <!--<div class="container m-0 p-0 mx-auto d-block">
                 <div class="row m-0 p-0">
                     <div class="col-12 m-0 p-0">
                         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTnD8Yq8QdAP9E4MfuwLgoyglx9BXHGhpndU5WeuRD_94KFw81gH8ZllqZjdgLnTFfwTleEluNdRJQH/embed?start=false&loop=true&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" id="urlap" class="mx-auto d-block"></iframe>
-                        <!-- width="960" height="749" -->
                     </div>
                 </div>
             </div>
-            <p class="text-center">Tejles mérethez: <a href="https://docs.google.com/forms/d/e/1FAIpQLScMG2jVmJmw7XBTA69A41VdmqwZzI3lkil3pOk6pE2sqzJxIQ/viewform?usp=sf_link" target="_blank">KATT IDE</a></p>
+            <p class="text-center">Tejles mérethez: <a href="https://docs.google.com/forms/d/e/1FAIpQLScMG2jVmJmw7XBTA69A41VdmqwZzI3lkil3pOk6pE2sqzJxIQ/viewform?usp=sf_link" target="_blank">KATT IDE</a></p>-->
+            <!-- width="960" height="749" -->
         </main>
         <footer class="text-center">
             Az oldal jelenlegi verziója: 0.1
@@ -81,3 +98,21 @@
     <script src="main.js"></script>
     <script src="felgomb.js"></script>
 </html>
+
+<script>
+    var l = document.getElementById("loading");
+    var c = document.getElementById("content");
+    setTimeout(function() {
+        // Rejtjük a betöltési üzenetet
+        document.getElementById("loading").style.display = "none";
+        l.classList.add("d-none");
+        // Megjelenítjük a tartalmat
+        document.getElementById("content").style.display = "block";
+        c.classList.remove("d-none");
+    }, 1500);
+</script>
+<style>
+    #iii {
+        font-size: 50px;
+    }
+</style>
