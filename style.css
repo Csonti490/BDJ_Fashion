@@ -101,7 +101,7 @@ a.linkek {
     text-decoration: none !important;
 }
 
-ul li {
+ul#infok li {
  list-style-type: circle;
 }
 
